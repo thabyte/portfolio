@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import BackLink from '../components/BackLink.astro';
 
 const experience = [
   {
@@ -57,7 +58,8 @@ const skills = [
 
 <Base title="Résumé — Titus Muthomi" path="/resume">
   <section class="mx-auto max-w-3xl px-6 pb-12 pt-16">
-    <div class="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--color-line)] pb-6">
+    <BackLink />
+    <div class="mt-8 flex flex-wrap items-end justify-between gap-4 border-b border-[var(--color-line)] pb-6">
       <div>
         <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">Titus Muthomi</h1>
         <p class="mt-1 text-[var(--color-ink-soft)]">Senior Software Engineer · Nairobi, Kenya</p>

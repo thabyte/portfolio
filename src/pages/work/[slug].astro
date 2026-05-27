@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import type { GetStaticPaths } from 'astro';
 import Base from '../../layouts/Base.astro';
+import BackLink from '../../components/BackLink.astro';
 
 export const getStaticPaths = (async () => {
   const items = await getCollection('work');
@@ -15,11 +16,7 @@ const d = item.data;
 
 <Base title={`${d.title} — Titus Muthomi`} description={d.summary} path={`/work/${item.id}`}>
   <article class="mx-auto max-w-3xl px-6 pb-12 pt-16">
-    <a
-      href="/#work"
-      class="font-mono text-sm text-[var(--color-ink-mute)] transition-colors hover:text-[var(--color-ink)]"
-      >← All work</a
-    >
+    <BackLink href="/#work" label="All work" />
 
     <header class="mt-8 border-b border-[var(--color-line)] pb-8">
       {
