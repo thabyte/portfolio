@@ -1,0 +1,23 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# astro
+.astro/
+
+# environment
+.env
+.env.production
+
+# logs
+*.log
+npm-debug.log*
+
+# macOS / editors
+.DS_Store
+*.swp
+.idea/
+.vscode/
