@@ -29,10 +29,15 @@ npm run preview    # serve the production build locally
 - **Accent color & theme** — change `--color-accent` in `src/styles/global.css`
   (one place re-skins the whole site).
 
+## Résumé
+
+The résumé is an HTML page at `/resume` (`src/pages/resume.astro`) — phone-free
+by design, no PDF download to keep PII off a public site. To offer a PDF later,
+export a phone-free version from your résumé tool, drop it in `public/`, and add
+a download link to `src/pages/resume.astro`.
+
 ## Still to add
 
-- [ ] **OG image** at `public/og/default.png` (1200×630). Referenced in
-      `src/layouts/Base.astro` — until added, social link previews have no image.
 - [ ] **Contact form endpoint** — paste a Formspree ID in
       `src/components/ContactForm.tsx` (`FORMSPREE_ID`). Until then the form
       falls back to opening the visitor's mail client.

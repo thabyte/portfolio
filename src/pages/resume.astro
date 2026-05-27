@@ -1,0 +1,133 @@
+---
+import Base from '../layouts/Base.astro';
+
+const experience = [
+  {
+    role: 'Software Engineer',
+    org: 'Riverbank Solutions Ltd (client: a tier-one East African bank)',
+    when: 'Apr 2025 — Present',
+    bullets: [
+      'Architected a multi-tenant payment-disbursement backend (Java 23, Spring Boot 3.5, MySQL, Redis, Elasticsearch 8) serving 5+ African subsidiaries on a single codebase, with per-jurisdiction data isolation and maker-checker controls.',
+      'Built a USSD gateway integrating 5 telco providers behind a strategy-pattern abstraction, with Redis-backed session state and multi-language localization.',
+      'Built the Go + Chi server (26 domain packages, PostgreSQL outbox + LISTEN/NOTIFY) and contributed to the Rust + Tauri offline-first terminal for a supermarket point-of-sale platform.',
+      'Delivered Vue 3 + TypeScript operations dashboards for branch and beneficiary management.',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    org: 'Kyosk Digital Services',
+    when: 'Oct 2024 — Apr 2025',
+    bullets: [
+      'Designed and shipped a hub-and-spoke inventory model introducing third-party-managed warehousing.',
+      'Built a high-availability stock-take service that cut warehouse downtime during counts.',
+      'Drove test coverage on order-fulfilment services to 90%, reducing production incidents.',
+    ],
+  },
+  {
+    role: 'Software Engineer',
+    org: 'Akili Group',
+    when: 'Sep 2022 — Oct 2024',
+    bullets: [
+      'Led the back-end migration from Node.js to Kotlin + Spring Boot.',
+      'Designed and built stakeholder, product, and logistics services on Kotlin/Spring Boot, deployed to AWS.',
+      'Built customer-facing dashboards in React + TypeScript, working full-stack across the services.',
+      'Stood up the CI/CD pipeline (Docker, GitHub Actions); interviewed, onboarded, and mentored engineers.',
+    ],
+  },
+  {
+    role: 'Software Engineering Intern',
+    org: 'Tala',
+    when: 'May 2023 — Dec 2023',
+    bullets: [
+      "Shipped backend features on Tala's wallet platform serving 8M+ users in Java, Kotlin, and Spring Boot.",
+      'Built the KYC onboarding flow (document upload, verification, wallet provisioning).',
+      'Developed the cash-in/cash-out module and a central-bank-compliance reporting service (Spring Batch, AWS S3).',
+    ],
+  },
+];
+
+const skills = [
+  { label: 'Languages', items: 'Java, Kotlin, Go, Rust, Python, TypeScript, JavaScript' },
+  { label: 'Backend', items: 'Spring Boot, Spring Batch, FastAPI, Chi (Go), Tauri (Rust), gRPC, REST, GraphQL' },
+  { label: 'Data & messaging', items: 'PostgreSQL, Oracle, MySQL, MongoDB, Redis, Elasticsearch, Kafka, Temporal' },
+  { label: 'AI / ML', items: 'LangChain, ChromaDB, scikit-learn, LightGBM, XGBoost, PyTorch' },
+  { label: 'Cloud & DevOps', items: 'AWS, Docker, GitHub Actions, Flyway, Caddy / Nginx' },
+];
+---
+
+<Base title="Résumé — Titus Muthomi" path="/resume">
+  <section class="mx-auto max-w-3xl px-6 pb-12 pt-16">
+    <div class="flex flex-wrap items-end justify-between gap-4 border-b border-[var(--color-line)] pb-6">
+      <div>
+        <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">Titus Muthomi</h1>
+        <p class="mt-1 text-[var(--color-ink-soft)]">Senior Software Engineer · Nairobi, Kenya</p>
+      </div>
+      <div class="flex flex-wrap gap-4 text-sm">
+        <a class="font-medium text-[var(--color-accent)]" href="mailto:muthomititus@gmail.com">Email</a>
+        <a class="text-[var(--color-ink-mute)] hover:text-[var(--color-ink)]" href="https://www.linkedin.com/in/kalunge/">LinkedIn</a>
+        <a class="text-[var(--color-ink-mute)] hover:text-[var(--color-ink)]" href="https://github.com/Kalunge">GitHub</a>
+      </div>
+    </div>
+
+    <p class="mt-8 leading-relaxed text-[var(--color-ink-soft)]">
+      Senior software engineer with four years building fintech and e-commerce
+      platforms serving millions of users across East Africa. Strongest in
+      distributed-systems design, multi-tenant architecture, and high-throughput
+      transaction processing on the JVM (Java, Kotlin, Spring Boot), with hands-on
+      Go and Rust on production point-of-sale systems, and production ML/RAG work.
+    </p>
+
+    <h2 class="mt-12 font-mono text-sm uppercase tracking-wider text-[var(--color-ink-mute)]">Experience</h2>
+    <div class="mt-6 space-y-8">
+      {
+        experience.map((job) => (
+          <div>
+            <div class="flex flex-wrap items-baseline justify-between gap-2">
+              <h3 class="font-semibold text-[var(--color-ink)]">
+                {job.role} — {job.org}
+              </h3>
+              <span class="font-mono text-xs text-[var(--color-ink-mute)]">{job.when}</span>
+            </div>
+            <ul class="prose mt-3 max-w-none text-sm">
+              {job.bullets.map((b) => (
+                <li>{b}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <h2 class="mt-12 font-mono text-sm uppercase tracking-wider text-[var(--color-ink-mute)]">Skills</h2>
+    <dl class="mt-6 divide-y divide-[var(--color-line)]">
+      {
+        skills.map((s) => (
+          <div class="flex flex-col gap-1 py-3 sm:flex-row sm:gap-6">
+            <dt class="w-40 shrink-0 text-sm font-medium">{s.label}</dt>
+            <dd class="text-sm text-[var(--color-ink-mute)]">{s.items}</dd>
+          </div>
+        ))
+      }
+    </dl>
+
+    <h2 class="mt-12 font-mono text-sm uppercase tracking-wider text-[var(--color-ink-mute)]">Education & certifications</h2>
+    <div class="mt-6 space-y-4 text-sm">
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <span class="font-medium">MSc, Software Engineering — Quantic School of Business and Technology</span>
+        <span class="font-mono text-xs text-[var(--color-ink-mute)]">2026 (expected)</span>
+      </div>
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <span class="font-medium">Full-Stack Software Development — Microverse</span>
+        <span class="font-mono text-xs text-[var(--color-ink-mute)]">2022</span>
+      </div>
+      <div class="flex flex-wrap items-baseline justify-between gap-2">
+        <span class="font-medium">AWS Certified Cloud Practitioner</span>
+        <span class="font-mono text-xs text-[var(--color-ink-mute)]">2026</span>
+      </div>
+    </div>
+
+    <p class="mt-12 text-sm text-[var(--color-ink-mute)]">
+      A downloadable PDF is available on request — <a class="text-[var(--color-accent)]" href="mailto:muthomititus@gmail.com">email me</a>.
+    </p>
+  </section>
+</Base>
