@@ -1,0 +1,148 @@
+@import 'tailwindcss';
+
+/* Manual dark mode: toggled by adding `.dark` to <html>. Falls back to
+   prefers-color-scheme via the inline script in Base.astro. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Design tokens -------------------------------------------------------
+   Near-monochrome ink/paper with a single fintech-credible accent (teal).
+   Change --accent in one place to re-skin the whole site.            ------- */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono Variable', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --color-ink: #0b0b0c;
+  --color-ink-soft: #3a3a3e;
+  --color-ink-mute: #6b6b73;
+  --color-paper: #fafaf8;
+  --color-paper-soft: #f1f1ee;
+  --color-line: #e4e4df;
+
+  --color-accent: #0e7c66;
+  --color-accent-soft: #d6efe8;
+
+  --text-balance: balance;
+}
+
+/* Dark palette — same variables, remapped on .dark */
+.dark {
+  --color-ink: #f4f4f1;
+  --color-ink-soft: #c4c4c0;
+  --color-ink-mute: #8a8a90;
+  --color-paper: #0c0d0f;
+  --color-paper-soft: #161718;
+  --color-line: #26282b;
+
+  --color-accent: #2dd4af;
+  --color-accent-soft: #103b33;
+}
+
+/* ---- Base ---------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-paper);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- Reveal-on-scroll (reduced-motion safe via the query above) --------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---- Long-form prose for case-study bodies ------------------------------ */
+.prose {
+  line-height: 1.7;
+  color: var(--color-ink-soft);
+}
+.prose > * + * {
+  margin-top: 1.1em;
+}
+.prose h2 {
+  margin-top: 2.2em;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--color-ink);
+}
+.prose h3 {
+  margin-top: 1.6em;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+.prose strong {
+  color: var(--color-ink);
+  font-weight: 600;
+}
+.prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose ul {
+  list-style: none;
+  padding-left: 0;
+}
+.prose ul > li {
+  position: relative;
+  padding-left: 1.3em;
+}
+.prose ul > li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+}
+.prose ul > li + li {
+  margin-top: 0.5em;
+}
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background-color: var(--color-paper-soft);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
