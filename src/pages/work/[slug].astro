@@ -45,6 +45,8 @@ const d = item.data;
             {d.liveUrl && (
               <a
                 href={d.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-md bg-[var(--color-ink)] px-4 py-2 text-sm font-medium text-[var(--color-paper)] transition-opacity hover:opacity-90"
               >
                 Live demo ↗
@@ -53,6 +55,8 @@ const d = item.data;
             {d.repoUrl && (
               <a
                 href={d.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 class="rounded-md border border-[var(--color-line)] px-4 py-2 text-sm font-medium transition-colors hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
               >
                 GitHub ↗
