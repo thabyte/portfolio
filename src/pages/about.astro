@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+
+const timeline = [
+  { when: '2025 — now', what: 'Software Engineer, Riverbank Solutions', note: 'Banking infrastructure for a tier-one East African bank.' },
+  { when: '2024 — 2025', what: 'Software Engineer, Kyosk Digital Services', note: 'Inventory and order-fulfilment platform.' },
+  { when: '2022 — 2024', what: 'Software Engineer, Akili Group', note: 'Backend migration to Kotlin/Spring Boot; full-stack delivery.' },
+  { when: '2023', what: 'Software Engineering Intern, Tala', note: 'Wallet, KYC, and central-bank-compliance services (8M+ users).' },
+];
+---
+
+<Base title="About — Titus Muthomi" path="/about">
+  <section class="mx-auto max-w-3xl px-6 pb-12 pt-16">
+    <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">About</h1>
+
+    <div class="mt-8 space-y-5 text-[var(--color-ink-soft)]">
+      <p class="leading-relaxed">
+        I'm a software engineer in Nairobi with four years building fintech and
+        e-commerce systems that serve millions of users. My day-to-day is
+        distributed systems on the JVM — Java, Kotlin, Spring Boot — designing
+        for the kind of correctness, auditability, and resilience that money
+        movement demands.
+      </p>
+      <p class="leading-relaxed">
+        I've shipped a multi-tenant banking portal serving 5+ African
+        subsidiaries on a single codebase, a USSD gateway spanning five telco
+        providers, and a supermarket point-of-sale platform written in Go and
+        Rust. Before that I worked on wallet, KYC, and central-bank-compliance
+        services at a lending platform serving 8M+ users.
+      </p>
+      <p class="leading-relaxed">
+        Outside client work I build and ship things end-to-end — a production
+        RAG assistant for fintech policy, a malware-detection ML pipeline with a
+        real CI/CD gate, a deployed full-stack web app. I care about systems
+        that are honest about their own limits: measured, tested, and
+        documented. I'm currently finishing an MSc in Software Engineering at
+        Quantic and I'm AWS-certified.
+      </p>
+    </div>
+
+    <h2 class="mt-14 font-mono text-sm uppercase tracking-wider text-[var(--color-ink-mute)]">
+      Experience
+    </h2>
+    <ol class="mt-6 space-y-5">
+      {
+        timeline.map((t) => (
+          <li class="flex flex-col gap-1 border-l-2 border-[var(--color-line)] pl-4 sm:flex-row sm:gap-6 sm:border-l-0 sm:pl-0">
+            <span class="w-32 shrink-0 font-mono text-sm text-[var(--color-ink-mute)]">
+              {t.when}
+            </span>
+            <span>
+              <span class="font-medium text-[var(--color-ink)]">{t.what}</span>
+              <span class="mt-0.5 block text-sm text-[var(--color-ink-soft)]">{t.note}</span>
+            </span>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div class="mt-14 flex flex-wrap gap-4 text-sm">
+      <a class="font-medium text-[var(--color-accent)]" href="mailto:muthomititus@gmail.com"
+        >Email</a
+      >
+      <a class="text-[var(--color-ink-mute)] hover:text-[var(--color-ink)]" href="https://www.linkedin.com/in/kalunge/">LinkedIn</a>
+      <a class="text-[var(--color-ink-mute)] hover:text-[var(--color-ink)]" href="https://github.com/Kalunge">GitHub</a>
+      <a
+        class="text-[var(--color-ink-mute)] hover:text-[var(--color-ink)]"
+        href="/Titus_Muthomi_Senior_Software_Engineer.pdf">Résumé (PDF)</a
+      >
+    </div>
+  </section>
+</Base>
