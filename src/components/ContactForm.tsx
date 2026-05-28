@@ -1,8 +1,6 @@
 import { useState } from 'react';
 
-// TODO: create a free form endpoint at https://formspree.io and paste the ID.
-// Until then the form falls back to opening the visitor's mail client.
-const FORMSPREE_ID = ''; // e.g. "xyzabcd"
+const FORMSPREE_ID = 'mlgvzeyq';
 
 type Status = 'idle' | 'sending' | 'ok' | 'error';
 
