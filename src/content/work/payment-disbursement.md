@@ -2,7 +2,7 @@
 title: 'Social-protection payment disbursement platform'
 tagline: 'A multi-tenant Spring Boot platform disbursing cash transfers across multiple African markets.'
 summary: 'A multi-tenant Spring Boot backend for disbursing social-protection payments to beneficiaries across multiple subsidiaries, with maker-checker controls and per-jurisdiction data isolation.'
-order: 4
+order: 5
 featured: true
 isPublic: false
 client: 'A tier-one East African bank'

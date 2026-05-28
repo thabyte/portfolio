@@ -2,7 +2,7 @@
 title: 'Café Fausse — full-stack restaurant platform'
 tagline: 'A from-scratch full-stack build: marketing site, reservations with availability logic, and an admin dashboard.'
 summary: 'A React + Flask web app for a fine-dining restaurant — self-service reservations with availability and table-assignment logic, newsletter, and a JWT-protected admin, deployed end-to-end.'
-order: 5
+order: 6
 featured: true
 isPublic: true
 tags: ['React', 'Flask', 'PostgreSQL', 'Full-stack']
