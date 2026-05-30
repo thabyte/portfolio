@@ -8,7 +8,7 @@ isPublic: true
 tags: ['Python', 'LangChain', 'RAG', 'FastAPI']
 stack: 'Python 3.11 · LangChain · ChromaDB · Groq Llama 3.3 70B · FastAPI · Streamlit · Caddy · Docker · GitHub Actions · pytest'
 liveUrl: 'https://fintech-policy-rag.onrender.com/'
-repoUrl: 'https://github.com/Kalunge/fintech-policy-rag'
+repoUrl: 'https://github.com/thabyte/policy-RAG-assistant'
 ---
 
 ## Context
