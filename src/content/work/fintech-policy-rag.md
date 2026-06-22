@@ -2,7 +2,7 @@
 title: 'Fintech Policy RAG Assistant'
 tagline: 'Grounded Q&A over fintech policy — every claim cited, hallucinations caught, honest about its own limits.'
 summary: 'A production RAG system: ask a policy question in plain English, get an answer grounded in the exact section with citations — and a polite refusal when the corpus does not cover it.'
-order: 2
+order: 3
 featured: true
 isPublic: true
 tags: ['Python', 'LangChain', 'RAG', 'FastAPI']

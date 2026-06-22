@@ -2,7 +2,7 @@
 title: 'USSD payments gateway'
 tagline: 'A single Spring Boot gateway routing banking sessions across five telco providers in East Africa.'
 summary: 'A Spring Boot gateway that fronts five telco providers behind a strategy-pattern abstraction, with Redis-backed session state and per-market localization — so new telcos slot in as one class, not a fork.'
-order: 4
+order: 5
 featured: true
 isPublic: false
 client: 'A tier-one East African bank'
