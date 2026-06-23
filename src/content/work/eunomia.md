@@ -7,7 +7,7 @@ featured: true
 isPublic: true
 tags: ['Kotlin', 'Spring Boot', 'RAG', 'Multi-agent', 'pgvector']
 stack: 'Kotlin 2 · Spring Boot 3 · Spring Security (JWT) · PostgreSQL + pgvector · LangChain4j · Groq Llama 3.3 70B · Cohere embed-english-v3.0 · React 18 · Vite · TypeScript · Tailwind · Testcontainers · Docker · Render · GitHub Actions'
-liveUrl: 'https://eunomia-m5yy.onrender.com'
+liveUrl: 'https://eunomia-web.vercel.app/'
 repoUrl: 'https://github.com/thabyte/eunomia-compliance-engine'
 ---
 
