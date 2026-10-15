@@ -31,5 +31,5 @@ deployment on passing tests.
 - Two guardrail layers plus a distance-threshold refusal that short-circuits before paying LLM cost
 - Dual embedding backends (local `bge-small` / hosted Cohere) with a dimension-mismatch guard
 - Vector store baked at build time for fast cold starts
-- Evaluation: 25 curated questions at 100% groundedness / citation / refusal — with a written, honest explanation of why that's a ceiling, not a real-world number
+- Evaluation: 25 curated questions at 100% groundedness / citation / refusal — a useful regression baseline, not a claim about real-world performance
 - p50 ~540ms end-to-end interactive latency
