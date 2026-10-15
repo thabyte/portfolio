@@ -17,6 +17,8 @@ When a regulator publishes a new circular, a bank's compliance team spends days 
 
 Built as the capstone project for an MSc in Software Engineering. Synthetic bank, real regulator format, real workflow.
 
+The code is public on [GitHub](https://github.com/Kalunge/eunomia-compliance-engine), and the deeper architecture and testing rationale is documented in [this technical write-up](https://github.com/Kalunge/eunomia-compliance-engine/blob/main/design_and_testing.md).
+
 ## What I built
 
 A multi-agent backend that orchestrates four specialist agents over an uploaded regulatory document — Extractor pulls the obligations, Mapper retrieves matching internal-policy passages via RAG against a pgvector store, ImpactAnalyzer scores each obligation as covered / partial / gap, and Summarizer produces the structured executive brief. A React + TypeScript dashboard layers in authentication, the internal policy catalog, regulation ingestion, real-time agent telemetry, and an overview. One Docker container, deployed to Render with CI/CD gating on a real Postgres + pgvector via Testcontainers.

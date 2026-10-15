@@ -4,9 +4,20 @@ import BackLink from '../components/BackLink.astro';
 
 const experience = [
   {
+    role: "Software Engineer — Master's Internship",
+    org: 'Microsoft',
+    when: 'Jul 2026 — Oct 2026',
+    bullets: [
+      'Developed AI-assisted Windows code-analysis workflows and MCP tools for repository search, connection metadata, annotation status, and controlled annotation writes.',
+      'Separated read operations from human-approved writes and moved slower external-service work out of the synchronous MCP path to reduce timeout and partial-failure risk.',
+      'Improved evaluation results across paired cases: precision 35.0% → 69.2%, recall 16.3% → 62.8%, F1 22.2% → 65.9%, and exact connection-detail accuracy 30.6% → 83.6%.',
+      'Reduced high-confidence hallucinations from 67 to 13 while maintaining 100% no-write safety; delivered accessible RSDAnalyzer workflows with 69 passing frontend tests.',
+    ],
+  },
+  {
     role: 'Software Engineer',
     org: 'Riverbank Solutions Ltd (client: a tier-one East African bank)',
-    when: 'Apr 2025 — Present',
+    when: 'Apr 2025 — Jun 2026',
     bullets: [
       'Architected a multi-tenant payment-disbursement backend (Java 23, Spring Boot 3.5, MySQL, Redis, Elasticsearch 8) serving 5+ African subsidiaries on a single codebase, with per-jurisdiction data isolation and maker-checker controls.',
       'Built a USSD gateway integrating 5 telco providers behind a strategy-pattern abstraction, with Redis-backed session state and multi-language localization.',
@@ -60,7 +71,7 @@ const skills = [
   { label: 'Languages', items: 'Java, Kotlin, Go, Rust, Python, TypeScript, JavaScript' },
   { label: 'Backend', items: 'Spring Boot, Spring Batch, FastAPI, Chi (Go), Tauri (Rust), gRPC, REST, GraphQL' },
   { label: 'Data & messaging', items: 'PostgreSQL, Oracle, MySQL, MongoDB, Redis, Elasticsearch, Kafka, Temporal' },
-  { label: 'AI / ML', items: 'LangChain, ChromaDB, scikit-learn, LightGBM, XGBoost, PyTorch' },
+  { label: 'AI / ML', items: 'RAG, MCP, LangChain, LangChain4j, pgvector, ChromaDB, scikit-learn, LightGBM, XGBoost, PyTorch' },
   { label: 'Cloud & DevOps', items: 'AWS, Docker, GitHub Actions, Flyway, Caddy / Nginx' },
 ];
 ---
@@ -81,7 +92,7 @@ const skills = [
     </div>
 
     <p class="mt-8 leading-relaxed text-[var(--color-ink-soft)]">
-      Senior software engineer with four years building fintech and e-commerce
+      Senior software engineer with 4+ years building fintech and e-commerce
       platforms serving millions of users across East Africa. Strongest in
       distributed-systems design, multi-tenant architecture, and high-throughput
       transaction processing on the JVM (Java, Kotlin, Spring Boot), with hands-on
@@ -125,7 +136,7 @@ const skills = [
     <div class="mt-6 space-y-4 text-sm">
       <div class="flex flex-wrap items-baseline justify-between gap-2">
         <span class="font-medium">MSc, Software Engineering — Quantic School of Business and Technology</span>
-        <span class="font-mono text-xs text-[var(--color-ink-mute)]">2026 (expected)</span>
+        <span class="font-mono text-xs text-[var(--color-ink-mute)]">2026</span>
       </div>
       <div class="flex flex-wrap items-baseline justify-between gap-2">
         <span class="font-medium">Full-Stack Software Development — Microverse</span>
