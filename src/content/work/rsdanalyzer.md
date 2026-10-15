@@ -7,7 +7,7 @@ featured: true
 isPublic: false
 client: 'Microsoft — Master''s internship'
 tags: ['AI agents', 'MCP', 'Evaluation', 'ASP.NET Core']
-stack: 'React · TypeScript · Fluent UI · ASP.NET Core · EF Core · SQL Server · MCP · CQRS'
+stack: 'C# · .NET · ASP.NET Core · React · TypeScript · Fluent UI · EF Core · SQL Server · MCP · CQRS'
 ---
 
 ## Context
@@ -23,12 +23,12 @@ engineering work without exposing confidential implementation details.
 
 ## What I built
 
-I developed and integrated MCP tools that allowed the AI workflow to inspect
-repository metadata, search code, retrieve connection information, check
-existing annotations, and create annotations through controlled write
-operations. I also helped modernize the RSDAnalyzer experience with an
-accessible React, TypeScript, and Fluent UI workflow for builds, connections,
-annotations, and review.
+I contributed to the AI workflow and developed and integrated MCP tools that
+allowed it to inspect repository metadata, search code, retrieve connection
+information, check existing annotations, and create annotations through
+controlled write operations. I also helped modernize the RSDAnalyzer experience
+with an accessible React, TypeScript, and Fluent UI workflow for builds,
+connections, annotations, and review.
 
 ## Reliability and safety
 
@@ -49,4 +49,3 @@ annotations, and review.
 - Exact connection-detail accuracy: **30.6% → 83.6%**
 - High-confidence hallucinations: **67 → 13**
 - No-write safety: **100%**
-- Frontend tests: **69 passing**
